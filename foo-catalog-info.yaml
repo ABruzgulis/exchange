@@ -1,0 +1,48 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  #name [required]
+  name: ms-foo
+  #description [optional]
+  description: foo base app
+  #namespace [optional]
+  namespace: main
+  #uid [output]
+  #title [optional]
+  #labels [optional]
+  labels:
+    ms: foo-app
+    domain: foo
+    #v20-cpu-max: "0.5"
+
+    #email-notification: v20-team-hades@eisgroup.com
+  #annotations [optional]
+  # Example for optional annotations
+  # annotations:
+  #   github.com/project-slug: backstage/backstage
+  #   backstage.io/techdocs-ref: dir:.
+  annotations:
+    #jenkins.io/job-full-name: "foo-deploy"
+    eisgroup.com/docker-file-path: "/ref-impl/applications/foo-app/Dockerfile"
+    eisgroup.com/deploy-jenkins-job-path: "/jenkins/foo-deploy/deployProperties.yaml"
+    eisgroup.com/helm-chart-path: "jenkins/foo-deploy/helm/components/foo"
+    #circleci.com/project-slug: github/example-org/artist-website
+  #tags [optional]
+  tags:
+    - genesis-core-component
+    - auto-release-branch-create
+    - group-core
+    - etcs-core
+    - team-billing-lts-component
+    - java21
+  #links [optional]
+  links:
+    - url: https://wiki.eisgroup.com/display/genesis/foo+MS
+      title: foo MS
+      type: wiki
+spec:
+  system: core
+  type: service
+  owner: john@example.com
+#  owner: group:ldap/git_foo_rw
+  lifecycle: production
