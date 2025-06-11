@@ -4,7 +4,7 @@ metadata:
   #name [required]
   name: ms-foo
   #description [optional]
-  description: foo base app
+  description: foo base app changed
   #namespace [optional]
   namespace: main
   #uid [output]
@@ -38,7 +38,7 @@ metadata:
   #links [optional]
   links:
     - url: https://wiki.eisgroup.com/display/genesis/foo+MS
-      title: foo MS
+      title: foo MS draft
       type: wiki
 spec:
   system: core
